@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3001/notes-app -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3001/notes-app/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3001/notes-app/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3001/notes-app/manifest.json">
+    <!--
+      Notice the use of /notes-app in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/notes-app/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <script defer="" src="./calender notes app_files/bundle.js.download"></script><style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiO0FBQ0E7RUFDRTtJQUNFLFVBQVU7SUFDViwyQkFBMkI7RUFDN0I7RUFDQTtJQUNFLFVBQVU7SUFDVix3QkFBd0I7RUFDMUI7QUFDRiIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBtYXJnaW46IDA7XG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsICdSb2JvdG8nLCAnT3h5Z2VuJyxcbiAgICAnVWJ1bnR1JywgJ0NhbnRhcmVsbCcsICdGaXJhIFNhbnMnLCAnRHJvaWQgU2FucycsICdIZWx2ZXRpY2EgTmV1ZScsXG4gICAgc2Fucy1zZXJpZjtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG59XG5cbmNvZGUge1xuICBmb250LWZhbWlseTogc291cmNlLWNvZGUtcHJvLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgJ0NvdXJpZXIgTmV3JyxcbiAgICBtb25vc3BhY2U7XG59XG5Aa2V5ZnJhbWVzIGZhZGVJbiB7XG4gIGZyb20ge1xuICAgIG9wYWNpdHk6IDA7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDEwcHgpO1xuICB9XG4gIHRvIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgwKTtcbiAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>.react-calendar {
+  width: 350px;
+  max-width: 100%;
+  background: white;
+  border: 1px solid #a0a096;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  line-height: 1.125em;
+}
+
+.react-calendar--doubleView {
+  width: 700px;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  box-sizing: border-box;
+}
+
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font: inherit;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #d10000;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth,
+.react-calendar__decade-view__years__year--neighboringDecade,
+.react-calendar__century-view__decades__decade--neighboringCentury {
+  color: #757575;
+}
+
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 2em 0.5em;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  font: inherit;
+  font-size: 0.833em;
+}
+
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+  color: #ababab;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth:disabled,
+.react-calendar__decade-view__years__year--neighboringDecade:disabled,
+.react-calendar__century-view__decades__decade--neighboringCentury:disabled {
+  color: #cdcdcd;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__tile--now {
+  background: #ffff76;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #ffffa9;
+}
+
+.react-calendar__tile--hasActive {
+  background: #76baff;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #a9d4ff;
+}
+
+.react-calendar__tile--active {
+  background: #006edc;
+  color: white;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #1087ff;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #e6e6e6;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9yZWFjdC1jYWxlbmRhci9kaXN0L0NhbGVuZGFyLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7RUFDWixlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLHlCQUF5QjtFQUN6Qiw2Q0FBNkM7RUFDN0Msb0JBQW9CO0FBQ3RCOztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsYUFBYTtFQUNiLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxVQUFVO0VBQ1YsYUFBYTtBQUNmOztBQUVBOzs7O0VBTUUsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsU0FBUztFQUNULFNBQVM7RUFDVCxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLFlBQVk7RUFDWixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQixpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQix1QkFBdUI7RUFDdkIsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQixpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBOzs7RUFHRSxjQUFjO0FBQ2hCOztBQUVBOzs7RUFHRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxlQUFlO0VBQ2Ysc0JBQXNCO0VBQ3RCLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCOztBQUVBOzs7RUFHRSxjQUFjO0FBQ2hCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTs7RUFFRSxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxtQkFBbUI7QUFDckI7O0FBRUE7O0VBRUUsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsbUJBQW1CO0VBQ25CLFlBQVk7QUFDZDs7QUFFQTs7RUFFRSxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0IiLCJzb3VyY2VzQ29udGVudCI6WyIucmVhY3QtY2FsZW5kYXIge1xuICB3aWR0aDogMzUwcHg7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNhMGEwOTY7XG4gIGZvbnQtZmFtaWx5OiAnQXJpYWwnLCAnSGVsdmV0aWNhJywgc2Fucy1zZXJpZjtcbiAgbGluZS1oZWlnaHQ6IDEuMTI1ZW07XG59XG5cbi5yZWFjdC1jYWxlbmRhci0tZG91YmxlVmlldyB7XG4gIHdpZHRoOiA3MDBweDtcbn1cblxuLnJlYWN0LWNhbGVuZGFyLS1kb3VibGVWaWV3IC5yZWFjdC1jYWxlbmRhcl9fdmlld0NvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIG1hcmdpbjogLTAuNWVtO1xufVxuXG4ucmVhY3QtY2FsZW5kYXItLWRvdWJsZVZpZXcgLnJlYWN0LWNhbGVuZGFyX192aWV3Q29udGFpbmVyID4gKiB7XG4gIHdpZHRoOiA1MCU7XG4gIG1hcmdpbjogMC41ZW07XG59XG5cbi5yZWFjdC1jYWxlbmRhcixcbi5yZWFjdC1jYWxlbmRhciAqLFxuLnJlYWN0LWNhbGVuZGFyICo6YmVmb3JlLFxuLnJlYWN0LWNhbGVuZGFyICo6YWZ0ZXIge1xuICAtbW96LWJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gIC13ZWJraXQtYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbn1cblxuLnJlYWN0LWNhbGVuZGFyIGJ1dHRvbiB7XG4gIG1hcmdpbjogMDtcbiAgYm9yZGVyOiAwO1xuICBvdXRsaW5lOiBub25lO1xufVxuXG4ucmVhY3QtY2FsZW5kYXIgYnV0dG9uOmVuYWJsZWQ6aG92ZXIge1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5yZWFjdC1jYWxlbmRhcl9fbmF2aWdhdGlvbiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGhlaWdodDogNDRweDtcbiAgbWFyZ2luLWJvdHRvbTogMWVtO1xufVxuXG4ucmVhY3QtY2FsZW5kYXJfX25hdmlnYXRpb24gYnV0dG9uIHtcbiAgbWluLXdpZHRoOiA0NHB4O1xuICBiYWNrZ3JvdW5kOiBub25lO1xufVxuXG4ucmVhY3QtY2FsZW5kYXJfX25hdmlnYXRpb24gYnV0dG9uOmRpc2FibGVkIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YwZjBmMDtcbn1cblxuLnJlYWN0LWNhbGVuZGFyX19uYXZpZ2F0aW9uIGJ1dHRvbjplbmFibGVkOmhvdmVyLFxuLnJlYWN0LWNhbGVuZGFyX19uYXZpZ2F0aW9uIGJ1dHRvbjplbmFibGVkOmZvY3VzIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2U2ZTZlNjtcbn1cblxuLnJlYWN0LWNhbGVuZGFyX19tb250aC12aWV3X193ZWVrZGF5cyB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgZm9udDogaW5oZXJpdDtcbiAgZm9udC1zaXplOiAwLjc1ZW07XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4ucmVhY3QtY2FsZW5kYXJfX21vbnRoLXZpZXdfX3dlZWtkYXlzX193ZWVrZGF5IHtcbiAgcGFkZGluZzogMC41ZW07XG59XG5cbi5yZWFjdC1jYWxlbmRhcl9fbW9udGgtdmlld19fd2Vla051bWJlcnMgLnJlYWN0LWNhbGVuZGFyX190aWxlIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZvbnQ6IGluaGVyaXQ7XG4gIGZvbnQtc2l6ZTogMC43NWVtO1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLnJlYWN0LWNhbGVuZGFyX19tb250aC12aWV3X19kYXlzX19kYXktLXdlZWtlbmQge1xuICBjb2xvcjogI2QxMDAwMDtcbn1cblxuLnJlYWN0LWNhbGVuZGFyX19tb250aC12aWV3X19kYXlzX19kYXktLW5laWdoYm9yaW5nTW9udGgsXG4ucmVhY3QtY2FsZW5kYXJfX2RlY2FkZS12aWV3X195ZWFyc19feWVhci0tbmVpZ2hib3JpbmdEZWNhZGUsXG4ucmVhY3QtY2FsZW5kYXJfX2NlbnR1cnktdmlld19fZGVjYWRlc19fZGVjYWRlLS1uZWlnaGJvcmluZ0NlbnR1cnkge1xuICBjb2xvcjogIzc1NzU3NTtcbn1cblxuLnJlYWN0LWNhbGVuZGFyX195ZWFyLXZpZXcgLnJlYWN0LWNhbGVuZGFyX190aWxlLFxuLnJlYWN0LWNhbGVuZGFyX19kZWNhZGUtdmlldyAucmVhY3QtY2FsZW5kYXJfX3RpbGUsXG4ucmVhY3QtY2FsZW5kYXJfX2NlbnR1cnktdmlldyAucmVhY3QtY2FsZW5kYXJfX3RpbGUge1xuICBwYWRkaW5nOiAyZW0gMC41ZW07XG59XG5cbi5yZWFjdC1jYWxlbmRhcl9fdGlsZSB7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgcGFkZGluZzogMTBweCA2LjY2NjdweDtcbiAgYmFja2dyb3VuZDogbm9uZTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBmb250OiBpbmhlcml0O1xuICBmb250LXNpemU6IDAuODMzZW07XG59XG5cbi5yZWFjdC1jYWxlbmRhcl9fdGlsZTpkaXNhYmxlZCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmMGYwZjA7XG4gIGNvbG9yOiAjYWJhYmFiO1xufVxuXG4ucmVhY3QtY2FsZW5kYXJfX21vbnRoLXZpZXdfX2RheXNfX2RheS0tbmVpZ2hib3JpbmdNb250aDpkaXNhYmxlZCxcbi5yZWFjdC1jYWxlbmRhcl9fZGVjYWRlLXZpZXdfX3llYXJzX195ZWFyLS1uZWlnaGJvcmluZ0RlY2FkZTpkaXNhYmxlZCxcbi5yZWFjdC1jYWxlbmRhcl9fY2VudHVyeS12aWV3X19kZWNhZGVzX19kZWNhZGUtLW5laWdoYm9yaW5nQ2VudHVyeTpkaXNhYmxlZCB7XG4gIGNvbG9yOiAjY2RjZGNkO1xufVxuXG4ucmVhY3QtY2FsZW5kYXJfX3RpbGU6ZW5hYmxlZDpob3Zlcixcbi5yZWFjdC1jYWxlbmRhcl9fdGlsZTplbmFibGVkOmZvY3VzIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2U2ZTZlNjtcbn1cblxuLnJlYWN0LWNhbGVuZGFyX190aWxlLS1ub3cge1xuICBiYWNrZ3JvdW5kOiAjZmZmZjc2O1xufVxuXG4ucmVhY3QtY2FsZW5kYXJfX3RpbGUtLW5vdzplbmFibGVkOmhvdmVyLFxuLnJlYWN0LWNhbGVuZGFyX190aWxlLS1ub3c6ZW5hYmxlZDpmb2N1cyB7XG4gIGJhY2tncm91bmQ6ICNmZmZmYTk7XG59XG5cbi5yZWFjdC1jYWxlbmRhcl9fdGlsZS0taGFzQWN0aXZlIHtcbiAgYmFja2dyb3VuZDogIzc2YmFmZjtcbn1cblxuLnJlYWN0LWNhbGVuZGFyX190aWxlLS1oYXNBY3RpdmU6ZW5hYmxlZDpob3Zlcixcbi5yZWFjdC1jYWxlbmRhcl9fdGlsZS0taGFzQWN0aXZlOmVuYWJsZWQ6Zm9jdXMge1xuICBiYWNrZ3JvdW5kOiAjYTlkNGZmO1xufVxuXG4ucmVhY3QtY2FsZW5kYXJfX3RpbGUtLWFjdGl2ZSB7XG4gIGJhY2tncm91bmQ6ICMwMDZlZGM7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLnJlYWN0LWNhbGVuZGFyX190aWxlLS1hY3RpdmU6ZW5hYmxlZDpob3Zlcixcbi5yZWFjdC1jYWxlbmRhcl9fdGlsZS0tYWN0aXZlOmVuYWJsZWQ6Zm9jdXMge1xuICBiYWNrZ3JvdW5kOiAjMTA4N2ZmO1xufVxuXG4ucmVhY3QtY2FsZW5kYXItLXNlbGVjdFJhbmdlIC5yZWFjdC1jYWxlbmRhcl9fdGlsZS0taG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTZlNmU2O1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div style="padding: 20px; background-color: rgb(176, 224, 230); min-height: 100vh;"><button style="float: right;">Light Mode</button><h1>📝 Calendar Notes App</h1><div class="react-calendar"><div class="react-calendar__navigation"><button aria-label="" class="react-calendar__navigation__arrow react-calendar__navigation__prev2-button" type="button">«</button><button aria-label="" class="react-calendar__navigation__arrow react-calendar__navigation__prev-button" type="button">‹</button><button aria-label="" class="react-calendar__navigation__label" type="button" style="flex-grow: 1;"><span class="react-calendar__navigation__label__labelText react-calendar__navigation__label__labelText--from">July 2025</span></button><button aria-label="" class="react-calendar__navigation__arrow react-calendar__navigation__next-button" type="button">›</button><button aria-label="" class="react-calendar__navigation__arrow react-calendar__navigation__next2-button" type="button">»</button></div><div class="react-calendar__viewContainer"><div class="react-calendar__month-view"><div style="display: flex; align-items: flex-end;"><div style="flex-grow: 1; width: 100%;"><div class="react-calendar__month-view__weekdays" style="display: flex; flex-wrap: nowrap;"><div class="react-calendar__month-view__weekdays__weekday" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="Monday" title="Monday">Mon</abbr></div><div class="react-calendar__month-view__weekdays__weekday" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="Tuesday" title="Tuesday">Tue</abbr></div><div class="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--current" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="Wednesday" title="Wednesday">Wed</abbr></div><div class="react-calendar__month-view__weekdays__weekday" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="Thursday" title="Thursday">Thu</abbr></div><div class="react-calendar__month-view__weekdays__weekday" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="Friday" title="Friday">Fri</abbr></div><div class="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="Saturday" title="Saturday">Sat</abbr></div><div class="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="Sunday" title="Sunday">Sun</abbr></div></div><div class="react-calendar__month-view__days" style="display: flex; flex-wrap: wrap;"><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="June 30, 2025">30</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 1, 2025">1</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 2, 2025">2</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 3, 2025">3</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 4, 2025">4</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 5, 2025">5</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 6, 2025">6</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 7, 2025">7</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 8, 2025">8</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 9, 2025">9</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 10, 2025">10</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 11, 2025">11</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 12, 2025">12</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 13, 2025">13</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 14, 2025">14</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 15, 2025">15</abbr></button><button class="react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 16, 2025">16</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 17, 2025">17</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 18, 2025">18</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 19, 2025">19</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 20, 2025">20</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 21, 2025">21</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 22, 2025">22</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 23, 2025">23</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 24, 2025">24</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 25, 2025">25</abbr></button><button class="react-calendar__tile react-calendar__tile--active react-calendar__tile--range react-calendar__tile--rangeStart react-calendar__tile--rangeEnd react-calendar__tile--rangeBothEnds react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 26, 2025">26</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 27, 2025">27</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 28, 2025">28</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 29, 2025">29</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 30, 2025">30</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="July 31, 2025">31</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="August 1, 2025">1</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="August 2, 2025">2</abbr></button><button class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth" type="button" style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr aria-label="August 3, 2025">3</abbr></button></div></div></div></div></div></div><input placeholder="🔍 Search notes..." type="text" value="" style="width: 100%; padding: 10px; margin: 10px 0px;"><textarea placeholder="Write your note here..." style="width: 100%; padding: 10px;"></textarea><input placeholder="Tags (comma separated)" type="text" value="" style="width: 100%; margin-top: 10px; padding: 8px;"><select style="width: 100%; margin-top: 10px; padding: 8px;"><option value="Personal">Personal</option><option value="Work">Work</option><option value="Ideas">Ideas</option><option value="Study">Study</option></select><input type="date" value="2025-07-16" style="width: 48%; margin-top: 10px; margin-right: 4%;"><input type="time" value="" style="width: 48%; margin-top: 10px;"><div style="margin: 10px 0px;"><button style="font-size: 22px; margin-right: 5px;">🧸</button><button style="font-size: 22px; margin-right: 5px;">🐻</button><button style="font-size: 22px; margin-right: 5px;">🌸</button><button style="font-size: 22px; margin-right: 5px;">💖</button><button style="font-size: 22px; margin-right: 5px;">✨</button><button style="font-size: 22px; margin-right: 5px;">🎀</button><button style="font-size: 22px; margin-right: 5px;">😎</button><button style="font-size: 22px; margin-right: 5px;">🍭</button><button style="font-size: 22px; margin-right: 5px;">🦄</button><button style="font-size: 22px; margin-right: 5px;">🎈</button></div><input accept="image/*" type="file"><div style="border: 1px solid rgb(204, 204, 204); margin-top: 10px;"><div class="konvajs-content" role="presentation" style="position: relative; user-select: none; width: 1220px; height: 150px;"><canvas width="1830" height="225" style="padding: 0px; margin: 0px; border: 0px; background: transparent; position: absolute; top: 0px; left: 0px; width: 1220px; height: 150px; display: block;"></canvas></div></div><button style="margin-top: 20px; padding: 10px;">➕ Add Note</button><div style="margin-top: 30px;"></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+</body></html>
